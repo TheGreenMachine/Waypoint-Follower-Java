@@ -10,24 +10,24 @@ public class GamepadDriveCommand extends Command {
 
 	private Drivetrain drivetrain;
 	private Gamepad gamepad;
-	
+
 	public GamepadDriveCommand(Gamepad gamepad) {
 		super("gamepaddrivecommand");
 		this.gamepad = gamepad;
 		drivetrain = Components.getInstance().drivetrain;
 		requires(drivetrain);
 	}
-	
+
 	@Override
 	protected void initialize() {
-		
+
 	}
 
 	@Override
 	protected void execute() {
 		double verticalStrafe = gamepad.getLeftY();
 		double rotation = gamepad.getRightX();
-		
+
 		drivetrain.setDrivetrain(verticalStrafe, rotation);
 	}
 
