@@ -2,11 +2,15 @@ package com.edinarobotics.follower;
 
 import com.edinarobotics.follower.subsystems.Drivetrain;
 
+import edu.wpi.first.wpilibj.ADXRS450_Gyro;
+import edu.wpi.first.wpilibj.interfaces.Gyro;
+
 public class Components {
 
 	private static Components instance = new Components();
 
 	public Drivetrain drivetrain;
+	public Gyro gyro;
 	
 	// CAN Constants
 			// Drivetrain Constants
@@ -26,6 +30,7 @@ public class Components {
 				MIDDLE_LEFT_CANTALON, MIDDLE_RIGHT_CANTALON, BOTTOM_LEFT_CANTALON, 
 				BOTTOM_RIGHT_CANTALON);
 		
+		gyro = new ADXRS450_Gyro();
 	}
 
 	/**

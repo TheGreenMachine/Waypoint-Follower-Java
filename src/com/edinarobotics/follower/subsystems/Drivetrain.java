@@ -74,5 +74,13 @@ public class Drivetrain extends Subsystem1816 {
 		this.verticalStrafe = verticalStrafe;
 		update();
 	}
+	
+	public CANTalon getMiddleLeftCANTalon() {
+		return middleLeft;
+	}
+	
+	public CANTalon getMiddleRightCANTalon() {
+		return middleRight;
+	}
 
 }
